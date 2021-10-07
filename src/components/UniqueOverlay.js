@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useTransform } from 'framer-motion'
 import { motion } from 'framer-motion'
 
-import { LogoSVG, BurgerSVG, CloseSVG } from './IconSVG'
+import { LogoSVG, BurgerSVG, CloseSVG, MailSVG } from './IconSVG'
 import useWrapperScroll from './useWrapperScroll'
 
 const UniqueOverlay = () => {
@@ -24,20 +24,16 @@ const UniqueOverlay = () => {
           <li><a href="/">Home</a></li>
           <li><a href="/">Contact</a></li>
           <li><a href="/">About</a></li>
-
         </BurgerNav>
       </Header>
 
       <Footer style={{ opacity }}>
         <ul>
           <li>
-            <p>Porfolio</p>
+            <p>With <span role='img' aria-label='heart'>💜</span> by Bochenko</p>
           </li>
           <li>
-            <p>made with <span role='img' aria-label='heart'>💜</span> </p>
-          </li>
-          <li>
-            <p>by Bochenko Ivan</p>
+            <a aria-label='mail' href='mailto:bochenko.business@gmail.com'><Mail /></a>
           </li>
         </ul>
       </Footer>
@@ -116,7 +112,13 @@ const BurgerNav = styled.div`
   }
 `
 
- const Footer = styled(motion.footer)`
+const Mail = styled(MailSVG)`
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+`
+
+const Footer = styled(motion.footer)`
   position: fixed;
   bottom: 0;
   left: 0;
@@ -130,16 +132,13 @@ const BurgerNav = styled.div`
 
     li {
       list-style: none;
-
       font-size: 14px;
 
-      & + li {
-        margin: 10px 0 0;
-      }
-
       a {
+        margin: 0 0 0 0px;
         text-decoration: none;
         color: #393c41;
+        font-size: 14px;
 
         &:hover {
           color: #000;
@@ -148,7 +147,7 @@ const BurgerNav = styled.div`
     }
   }
 
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 
   @media (min-width: 600px) {
     margin-bottom: 38px;
@@ -157,7 +156,7 @@ const BurgerNav = styled.div`
       flex-direction: row;
 
       li + li {
-        margin: 0 0 0 30px;
+        margin: 0 0 0 20px;
       }
     }
   }

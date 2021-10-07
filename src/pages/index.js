@@ -15,22 +15,25 @@ const IndexPage = () => {
   const models = [
     {
       name: 'Daniella Kaligorsky',
-      description: 'Product Designer'
+      description: 'Product Designer',
+      image: face
     },
     {
       name: 'Chekkit',
-      description: 'Self examination'
+      description: 'Self examination',
+      image: chekkit
     },
     {
       name: 'Shiro',
       description: 'Wireless charger and bedside light',
+      image: shiro
     },
   ]
   return (
     <>
-      <Container>
-        <ModelsWrapper>
-          {models.map(model => (
+      <ModelsWrapper>
+        {models.map(model => (
+          <Container image={model.image}>
             <ModelSection
               key={model.name}
               className="colored"
@@ -42,11 +45,11 @@ const IndexPage = () => {
                 />
               }
             />
-          ))}
-          <Spacer />
-          <UniqueOverlay />
-        </ModelsWrapper>
-      </Container>
+          </Container>
+        ))}
+        <UniqueOverlay />
+        <Spacer />
+      </ModelsWrapper>
       <GlobalStyles/>
     </>
   )
@@ -82,39 +85,15 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
-const Container = styled.div`  
-  .colored{    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-  }
-  .colored:nth-child(1) {
-
-  }
-  .colored:nth-child(2) {
-
-    background-image: url(${face});
-  }
-  .colored:nth-child(3) {
-    background-image: url(${chekkit});
-  }
-  .colored:nth-child(4) {
-    background-image: url(${shiro});
-  }
-  .colored:nth-child(5) {
-    background: #a9fdac;
-  }
-  .colored:nth-child(6) {
-    background: #90f29c;
-  }
-  .colored:nth-child(7) {
-    background: #77e68c;
-  }
+const Container = styled.div`
+  background-image: url(${props=>props.image});
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `
 
 const Spacer = styled.div`
-  height: 15vh;
+  height: 12vh;
   background: #b1b6c1;
-  /* background: radial-gradient(circle, rgba(92,94,98,0.6001751042213761) 0%, rgba(251,251,251,1) 90%, rgba(255,255,255,1) 100%); */
 `

@@ -10,13 +10,18 @@ const DefaultOverlayContent = ({ label, description }) => {
         <h1>{label}</h1>
         <h2>{description}</h2>
       </Heading>
+      <SpacerTop />
+      <Group>
+        <Buttons>
+          <button>Custom Order</button>
+          <button className="white">Existing Inventory</button>
 
-      <Buttons>
-        <button>Custom Order</button>
-        <button className="white">Existing Inventory</button>
+        </Buttons>
         <Arrow />
+      </Group>
 
-      </Buttons>
+        
+      <Spacer />
       
     </Container>
   )
@@ -29,6 +34,16 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+`
+const SpacerTop = styled.div`
+  height: 24vh;
+`
+
+const Spacer = styled.div`
+  height: 12vh;
+`
+const Group = styled.div`
+  height: 16vh;
 `
 
 const Heading = styled.div`
@@ -52,8 +67,10 @@ const Heading = styled.div`
 `
 
 const Arrow = styled(DownArrow)`
-  
-  display: block;
+  position: sticky;
+  top: 0;
+  display: flex;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
@@ -70,12 +87,11 @@ const Buttons = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 130px;
-
   > button {
     background: #1a1720;
     color: #fff;
     opacity: 0.8;
+    width: 30vh;
 
     font-size: 12px;
     font-weight: 500;
@@ -101,7 +117,6 @@ const Buttons = styled.div`
 
   @media (min-width: 600px) {
     flex-direction: row;
-    margin-bottom: 90px;
 
     > button + button {
       margin: 0 0 0 10px;
