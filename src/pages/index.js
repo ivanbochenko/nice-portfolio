@@ -6,9 +6,9 @@ import ModelsWrapper from '../components/ModelsWrapper'
 import ModelSection from '../components/ModelSection' 
 
 
-import face from '../images/face.png';
+import face from '../images/face.jpg';
 import chekkit from '../images/chekkit.jpg';
-import shiro from '../images/shiro.png';
+import shiro from '../images/shiro.jpg';
 
 
 const IndexPage = () => {
