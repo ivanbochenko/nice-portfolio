@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 
-import { LogoSVG, BurgerSVG, CloseSVG, BehanceSVG, InstagramSVG, LinkedinSVG } from './IconSVG'
+import { BurgerSVG, CloseSVG, BehanceSVG, InstagramSVG, LinkedinSVG } from './IconSVG'
 
 
 const UniqueOverlay = () => {
@@ -10,7 +10,6 @@ const UniqueOverlay = () => {
   return (
     <Container>
       <Header>
-        <Logo />
         <Burger onClick={()=>setBurger(true)}/>
         <BurgerNav show={burger}>
           <CloseWrapper>
@@ -103,11 +102,6 @@ const BurgerNav = styled.div`
       color: #393c41;
     }
   }
-`
-
-const Logo = styled(LogoSVG)`
-  height: 17px;
-  cursor: pointer;
 `
 
 const Burger = styled(BurgerSVG)`
