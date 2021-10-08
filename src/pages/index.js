@@ -16,7 +16,7 @@ const Home = () => {
       image: face
     },
     {
-      name: 'Chekkit',
+      name: 'Checkkit',
       description: 'Self examination',
       image: chekkit
     },
