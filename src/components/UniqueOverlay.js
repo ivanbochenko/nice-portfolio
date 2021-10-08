@@ -46,20 +46,6 @@ const Container = styled.div`
   bottom: 0;
 `
 
-const Header = styled.header`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0 20px;
-  min-height: 52px;
-`
-
 const Spacer = styled.div`
   height: 70vh;
 `
