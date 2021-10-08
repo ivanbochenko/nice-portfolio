@@ -1,16 +1,11 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import { useTransform } from 'framer-motion'
-import { motion } from 'framer-motion'
 
-import { LogoSVG, BurgerSVG, CloseSVG, MailSVG } from './IconSVG'
-import useWrapperScroll from './useWrapperScroll'
+import { LogoSVG, BurgerSVG, CloseSVG, BehanceSVG, InstagramSVG, LinkedinSVG } from './IconSVG'
+
 
 const UniqueOverlay = () => {
   const [burger, setBurger] = useState(false)
-  const { scrollYProgress } = useWrapperScroll()
-
-  const opacity = useTransform(scrollYProgress, [0.9, 1], [0, 1])
 
   return (
     <Container>
@@ -24,25 +19,27 @@ const UniqueOverlay = () => {
           <li><a href="/">Home</a></li>
           <li><a href="/">Contact</a></li>
           <li><a href="/">About</a></li>
+          <Spacer />
+          <Icons>
+            <ul>
+              <li>
+                <Behance />
+              </li>
+              <li>
+                <Instagram />
+              </li>
+              <li>
+                <Linkedin />
+              </li>
+            </ul>
+          </Icons>
         </BurgerNav>
       </Header>
-
-      <Footer style={{ opacity }}>
-        <ul>
-          <li>
-            <p>With <span role='img' aria-label='heart'>💜</span> by Bochenko</p>
-          </li>
-          <li>
-            <a aria-label='mail' href='mailto:bochenko.business@gmail.com'><Mail /></a>
-          </li>
-        </ul>
-      </Footer>
     </Container>
   )
 }
 
 export default UniqueOverlay
-
 
 const Container = styled.div`
   position: sticky;
@@ -66,28 +63,24 @@ const Header = styled.header`
   min-height: 52px;
 `
 
-const Logo = styled(LogoSVG)`
-  height: 17px;
-  cursor: pointer;
+const Spacer = styled.div`
+  height: 70vh;
 `
 
-const Burger = styled(BurgerSVG)`
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
+const Icons = styled.div`
+  padding-right: 10px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-  padding-right: 5px;
-`
-const Close = styled(CloseSVG)`
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  z-index: 100;
-`
+    li {
+      list-style: none; 
+      padding-right: 10px;
 
-const CloseWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
+    }
+  }
 `
 
 const BurgerNav = styled.div`
@@ -112,52 +105,45 @@ const BurgerNav = styled.div`
   }
 `
 
-const Mail = styled(MailSVG)`
-  width: 28px;
-  height: 28px;
+const Logo = styled(LogoSVG)`
+  height: 17px;
   cursor: pointer;
 `
 
-const Footer = styled(motion.footer)`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+const Burger = styled(BurgerSVG)`
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  padding-right: 5px;
+`
 
-    li {
-      list-style: none;
-      font-size: 14px;
+const Close = styled(CloseSVG)`
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 100;
+`
 
-      a {
-        margin: 0 0 0 0px;
-        text-decoration: none;
-        color: #393c41;
-        font-size: 14px;
+const CloseWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
 
-        &:hover {
-          color: #000;
-        }
-      }
-    }
-  }
+const Linkedin = styled(LinkedinSVG)`
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+`
 
-  margin-bottom: 24px;
+const Instagram = styled(InstagramSVG)`
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+`
 
-  @media (min-width: 600px) {
-    margin-bottom: 38px;
-
-    ul {
-      flex-direction: row;
-
-      li + li {
-        margin: 0 0 0 20px;
-      }
-    }
-  }
+const Behance = styled(BehanceSVG)`
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 `
