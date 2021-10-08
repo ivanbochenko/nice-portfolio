@@ -8,7 +8,6 @@ import face from '../images/face.jpg';
 import chekkit from '../images/chekkit.jpg';
 import shiro from '../images/shiro.jpg';
 
-
 const Home = () => {
   const models = [
     {

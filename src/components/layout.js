@@ -19,7 +19,6 @@ export default layout
 const GlobalStyles = createGlobalStyle`
   body{
     background: #b1b9c1;
-
   }
   * {
     margin: 0;

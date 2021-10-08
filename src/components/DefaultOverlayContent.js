@@ -15,14 +15,10 @@ const DefaultOverlayContent = ({ label, description }) => {
         <Buttons>
           <button>Custom Order</button>
           <button className="white">Existing Inventory</button>
-
         </Buttons>
         <Arrow />
       </Group>
-
-        
       <Spacer />
-      
     </Container>
   )
 }

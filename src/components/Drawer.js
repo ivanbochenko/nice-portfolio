@@ -1,15 +1,29 @@
-import React, {useState} from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from "gatsby"
 
 import { BurgerSVG, CloseSVG, BehanceSVG, InstagramSVG, LinkedinSVG } from './IconSVG'
 
-
 const Drawer = () => {
   const [burger, setBurger] = useState(false)
+  const wrapperRef = useRef(null)
+  useEffect(() => {
+    //If clicked on outside of element
+    function handleClickOutside(event) {
+        if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+          setBurger(false);
+        }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [wrapperRef]);
 
   return (
-    <Container>
+    <Container ref={wrapperRef}>
       <Burger onClick={()=>setBurger(true)}/>
       <BurgerNav show={burger}>
         <CloseWrapper>
