@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState } from 'react'
 import styled from 'styled-components'
 
-import {ModelsContext} from './ModelsContext'
+import { ModelsContext } from './ModelsContext'
 import ModelOverlay from './ModelOverlay'
 
 const ModelsWrapper = ({ children }) => {

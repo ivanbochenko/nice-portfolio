@@ -1,42 +1,37 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import { Link } from "gatsby"
 
 import { BurgerSVG, CloseSVG, BehanceSVG, InstagramSVG, LinkedinSVG } from './IconSVG'
 
 
-const UniqueOverlay = () => {
+const Drawer = () => {
   const [burger, setBurger] = useState(false)
 
   return (
     <Container>
-        <Burger onClick={()=>setBurger(true)}/>
-        <BurgerNav show={burger}>
-          <CloseWrapper>
-            <Close onClick={()=>setBurger(false)}/>
-          </CloseWrapper>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Contact</a></li>
-          <li><a href="/">About</a></li>
-          <Spacer />
-          <Icons>
-            <ul>
-              <li>
-                <Behance />
-              </li>
-              <li>
-                <Instagram />
-              </li>
-              <li>
-                <Linkedin />
-              </li>
-            </ul>
-          </Icons>
-        </BurgerNav>
+      <Burger onClick={()=>setBurger(true)}/>
+      <BurgerNav show={burger}>
+        <CloseWrapper>
+          <Close onClick={()=>setBurger(false)}/>
+        </CloseWrapper>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/contact/">Contact</Link></li>
+        <li><Link to="/about/">About</Link></li>
+        <Spacer />
+        <Icons>
+          <ul>
+            <li><Behance /></li>
+            <li><Instagram /></li>
+            <li><Linkedin /></li>
+          </ul>
+        </Icons>
+      </BurgerNav>
     </Container>
   )
 }
 
-export default UniqueOverlay
+export default Drawer
 
 const Container = styled.div`
   position: sticky;
@@ -51,8 +46,7 @@ const Spacer = styled.div`
 `
 
 const Icons = styled.div`
-  padding-right: 10px;
-  ul {
+  ul{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,9 +55,9 @@ const Icons = styled.div`
     li {
       list-style: none; 
       padding-right: 10px;
-
     }
   }
+  
 `
 
 const BurgerNav = styled.div`
