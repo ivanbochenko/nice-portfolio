@@ -9,7 +9,6 @@ const UniqueOverlay = () => {
 
   return (
     <Container>
-      <Header>
         <Burger onClick={()=>setBurger(true)}/>
         <BurgerNav show={burger}>
           <CloseWrapper>
@@ -33,7 +32,6 @@ const UniqueOverlay = () => {
             </ul>
           </Icons>
         </BurgerNav>
-      </Header>
     </Container>
   )
 }
@@ -105,11 +103,13 @@ const BurgerNav = styled.div`
 `
 
 const Burger = styled(BurgerSVG)`
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 25px;
 
-  padding-right: 5px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
 `
 
 const Close = styled(CloseSVG)`
