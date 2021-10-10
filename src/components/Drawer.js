@@ -26,6 +26,7 @@ const Drawer = () => {
     <Container ref={wrapperRef}>
       <Burger onClick={()=>setBurger(true)}/>
       <BurgerNav show={burger}>
+
         <CloseWrapper>
           <Close onClick={()=>setBurger(false)}/>
         </CloseWrapper>
@@ -58,11 +59,11 @@ const Container = styled.div`
 `
 
 const Spacer = styled.div`
-  height: 70vh;
+  flex-grow: 1;
 `
 
 const Icons = styled.div`
-  ul{
+  ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -77,6 +78,8 @@ const Icons = styled.div`
 `
 
 const BurgerNav = styled.div`
+  display: flex;
+  flex-direction: column;
   transition: transform 0.2s;
   position: fixed;
   top: 0;
