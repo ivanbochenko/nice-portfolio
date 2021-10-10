@@ -8,7 +8,7 @@ import face from '../images/face.jpg';
 import chekkit from '../images/chekkit.jpg';
 import shiro from '../images/shiro.jpg';
 import diversity from '../images/diversity-kit.jpg';
-import misite from '../images/misite.png';
+import misite from '../images/MiSite.jpg';
 
 
 
