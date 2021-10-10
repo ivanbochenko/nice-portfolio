@@ -59,5 +59,5 @@ const Container = styled.div`
 `
 
 const Spacer = styled.div`
-  height: 10vh;
+  height: 12vh;
 `

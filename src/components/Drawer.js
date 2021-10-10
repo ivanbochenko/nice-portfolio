@@ -35,9 +35,9 @@ const Drawer = () => {
         <Spacer />
         <Icons>
           <ul>
-            <li><Behance /></li>
-            <li><Instagram /></li>
-            <li><Linkedin /></li>
+            <li><a aria-label='behance' href='https://www.behance.net/kaligorsky'><Behance /></a></li>
+            <li><a aria-label='instagram' href='https://www.instagram.com/d.kaligorsky/'><Instagram /></a></li>
+            <li><a aria-label='linkedin' href='https://www.linkedin.com/in/kaligorsky/'><Linkedin /></a></li>
           </ul>
         </Icons>
       </BurgerNav>
