@@ -90,6 +90,7 @@ const BurgerNav = styled.div`
   list-style: none;
   padding: 20px;
   transform: ${props => props.show ? "translateX(0)":"translateX(100%)"};
+  
   li{
     padding: 10px 0;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -99,6 +100,9 @@ const BurgerNav = styled.div`
       color: #393c41;
     }
   }
+  @media (max-width: 800px) {    
+    width: 20vh;
+   }
 `
 
 const Burger = styled(BurgerSVG)`

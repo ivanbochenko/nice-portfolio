@@ -24,11 +24,15 @@ const AboutPage = () => (
         Since I was a child, I have been interested in animals, therefore I love
         nature and have a passion for scuba diving.
       </Text>
+      <Spacer/>
     </Container>
-
 )
 
 export default AboutPage
+
+const Spacer = styled.div`
+  height: 12vh;
+`
 
 const Text = styled.p`
   padding: 10vh 10vh 0vh 10vh;
@@ -44,7 +48,6 @@ const Heading = styled.h1`
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   @media (max-width: 800px) {
     flex-direction: column;
