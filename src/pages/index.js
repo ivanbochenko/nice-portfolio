@@ -7,6 +7,10 @@ import ModelSection from '../components/ModelSection'
 import face from '../images/face.jpg';
 import chekkit from '../images/chekkit.jpg';
 import shiro from '../images/shiro.jpg';
+import diversity from '../images/diversity-kit.jpg';
+import misite from '../images/misite.png';
+
+
 
 const Home = () => {
   const models = [
@@ -24,6 +28,16 @@ const Home = () => {
       name: 'Shiro',
       description: 'Wireless charger and bedside light',
       image: shiro
+    },
+    {
+      name: 'Diversity Kit',
+      description: 'Design for behaviour change/persuasive design',
+      image: diversity
+    },
+    {
+      name: 'MiSite',
+      description: 'Hand Arm Vibration Device for Construction Workers',
+      image: misite
     },
   ]
   return (
