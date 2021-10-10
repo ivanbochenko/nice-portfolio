@@ -5,7 +5,6 @@ const AboutPage = () => (
     <Container>
       <Heading>My name is Daniella Kaligorsky</Heading>
       <Text>
-
         I am a product design graduate from Technological University Dublin.
         I have developed a passion for solving every day problems through a
         variety of projects I have completed during my four year degree.
@@ -32,12 +31,12 @@ const AboutPage = () => (
 export default AboutPage
 
 const Text = styled.p`
-  padding: 10vh;
+  padding: 10vh 10vh 0vh 10vh;
   
 `
 
 const Heading = styled.h1`
-  padding: 10vh;
+  padding: 10vh 10vh 0vh 10vh;
   font-weight: normal;
 
 `
@@ -47,7 +46,6 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10vh;
   @media (max-width: 800px) {
     flex-direction: column;
    }
