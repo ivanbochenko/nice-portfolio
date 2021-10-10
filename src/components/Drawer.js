@@ -32,6 +32,8 @@ const Drawer = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/contact/">Contact</Link></li>
         <li><Link to="/about/">About</Link></li>
+        <li><a href='https://drive.google.com/file/d/1jjHj2mMRILLwUDEDSQqHKk4r8dYMOmjK/view'>CV</a></li>
+
         <Spacer />
         <Icons>
           <ul>
