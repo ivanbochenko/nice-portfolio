@@ -2,6 +2,7 @@
 
 - [x] React
 - [x] Styled Components
+- [x] Framer Motion
 
 ## 🚀 Quick start
 
