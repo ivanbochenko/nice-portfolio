@@ -5,7 +5,7 @@ const ContactPage = () => (
   <Container>
     <Heading>My contacts</Heading>
     <Text>
-      My contact information <br/>
+      
       Email: daniella.kaligorsky@healthbeacon.com
     </Text>
   </Container>
